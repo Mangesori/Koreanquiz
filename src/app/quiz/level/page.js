@@ -1,19 +1,16 @@
-import LevelSelection from "@/components/sections/quiz/LevelSelection";
+"use client";
+
+import LevelQuiz from "@/components/sections/quiz/LevelQuiz";
 import PageWrapper from "@/components/shared/wrappers/PageWrapper";
 
-export const metadata = {
-  title: "Select Your Level | Korean Quiz",
-  description: "Choose your Korean proficiency level for the quiz",
-};
-
-const LevelPage = () => {
+const LevelQuizPage = () => {
   return (
     <PageWrapper>
       <main>
-        <LevelSelection />
+        <LevelQuiz />
       </main>
     </PageWrapper>
   );
 };
 
-export default LevelPage;
+export default LevelQuizPage;

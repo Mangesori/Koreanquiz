@@ -1,3 +1,5 @@
+"use client"; // 최상단에 추가
+
 import React from "react";
 import Navitem from "./Navitem";
 import DropdownWrapper from "@/components/shared/wrappers/DropdownWrapper";
@@ -11,6 +13,7 @@ import useAuth from "@/hooks/useAuth"; // Add this import
 const NavItems = () => {
   const { user } = useAuth(); // Add this hook
 
+  // 객체를 단순화하여 직렬화 가능한 형태로 변환
   const baseNavItems = [
     {
       id: 1,
@@ -22,33 +25,10 @@ const NavItems = () => {
       id: 2,
       name: "Videos",
       path: "/videos",
-      dropdown: <DropdownVideos />,
       isRelative: false,
     },
-    /*{
-      id: 3,
-      name: "Blog",
-      path: "/blog",
-      dropdown: <DropdownBlog />,
-      isRelative: false,
-    },*/
-    /*{
-      id: 4,
-      name: "Book Lessons",
-      path: "/lessons/purchase",
-      dropdown: <DropdownLessons />,
-      isRelative: true,
-    },*/
-    /*{
-      id: 5,
-      name: "Demos",
-      path: "/",
-      dropdown: <DropdownDemoes />,
-      isRelative: false,
-    },*/
   ];
 
-  // Add Dashboard menu only for admin users
   const navItems =
     user?.role === "admin"
       ? [
@@ -56,8 +36,7 @@ const NavItems = () => {
           {
             id: 6,
             name: "Dashboard",
-            path: "/dashboards/admin-dashboard", // Changed from instructor to admin
-            dropdown: <DropdownDashboard />,
+            path: "/dashboards/admin-dashboard",
             isRelative: true,
           },
         ]
@@ -68,7 +47,10 @@ const NavItems = () => {
       <ul className="nav-list flex justify-center items-center">
         {navItems.map((navItem, idx) => (
           <Navitem key={idx} idx={idx} navItem={{ ...navItem, idx: idx }}>
-            <DropdownWrapper>{navItem.dropdown}</DropdownWrapper>
+            <DropdownWrapper>
+              {navItem.id === 2 && <DropdownVideos />}
+              {navItem.id === 6 && <DropdownDashboard />}
+            </DropdownWrapper>
           </Navitem>
         ))}
       </ul>
