@@ -1,5 +1,5 @@
 "use client"; // 최상단에 추가
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useSyncExternalStore } from "react";
 import { useSearchParams } from "next/navigation";
 import { quizDataByTopic } from "@/data/quizzes";
 import { useRouter } from "next/navigation";
