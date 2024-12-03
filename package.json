@@ -5,7 +5,7 @@
   "homepage": "https://mangesori.github.io/Koreanquiz",
   "scripts": {
     "dev": "next dev",
-    "build": "npm run clean && next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
     "clean": "rmdir /s /q .next && npm install",
