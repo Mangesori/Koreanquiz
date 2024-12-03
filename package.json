@@ -2,12 +2,15 @@
   "name": "edurock",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mangesori.github.io/Koreanquiz",
   "scripts": {
     "dev": "next dev",
     "build": "npm run clean && next build",
     "start": "next start",
     "lint": "next lint",
-    "clean": "rmdir /s /q .next && npm install"
+    "clean": "rmdir /s /q .next && npm install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "aos": "^3.0.0-beta.6",
