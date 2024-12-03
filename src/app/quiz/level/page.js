@@ -1,21 +1,19 @@
-import LevelQuiz from "@/components/sections/quiz/LevelQuiz";
+import LevelSelection from "@/components/sections/quiz/LevelSelection";
 import PageWrapper from "@/components/shared/wrappers/PageWrapper";
-import ThemeController from "@/components/shared/others/ThemeController";
 
 export const metadata = {
-  title: "Full-Level Quiz | Edurock - Education LMS Template",
-  description: "Full-Level Quiz | Edurock - Education LMS Template",
+  title: "Select Your Level | Korean Quiz",
+  description: "Choose your Korean proficiency level for the quiz",
 };
 
-const LevelQuizPage = () => {
+const LevelPage = () => {
   return (
     <PageWrapper>
       <main>
-        <LevelQuiz />
-        <ThemeController />
+        <LevelSelection />
       </main>
     </PageWrapper>
   );
 };
 
-export default LevelQuizPage;
+export default LevelPage;

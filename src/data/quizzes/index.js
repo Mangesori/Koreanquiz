@@ -33,7 +33,7 @@ export const quizDataByTopic = {
     questions: presentTenseQuestions,
   },
   "(Place)에서": {
-    questions: placeMarkersQuestions,
+    questions: placeMarkersQuestions || [], // fallback to empty array if undefined
   },
   "았어요/었어요": {
     questions: pastTenseQuestions,

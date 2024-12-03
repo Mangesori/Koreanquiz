@@ -6,17 +6,17 @@ const LevelSelection = () => {
     {
       level: "Beginner",
       description: "For those just starting out",
-      path: "/quiz/level/beginner/stage",
+      path: "/quiz/level/beginner",
     },
     {
       level: "Intermediate",
       description: "For those with some experience",
-      path: "/quiz/level/intermediate/stage",
+      path: "/quiz/level/intermediate",
     },
     {
       level: "Advanced",
       description: "For experienced learners",
-      path: "/quiz/level/advanced/stage",
+      path: "/quiz/level/advanced",
     },
   ];
 
