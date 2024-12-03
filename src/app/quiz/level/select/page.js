@@ -1,3 +1,4 @@
+"use client";
 import LevelSelection from "@/components/sections/quiz/LevelSelection"; // section -> sections로 수정
 import PageWrapper from "@/components/shared/wrappers/PageWrapper";
 import ThemeController from "@/components/shared/others/ThemeController";
